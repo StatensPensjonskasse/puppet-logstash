@@ -13,5 +13,6 @@ HOSTS:
       - 'cd / && yum localinstall -y jre-8u131-linux-x64.rpm'
     docker_preserve_image: true
 CONFIG:
-  type: foss
-  :trace_limit: 100  # Get more than 10 lines of trace when something fails.
+  type: aio
+  masterless: true
+  log_level: verbose
